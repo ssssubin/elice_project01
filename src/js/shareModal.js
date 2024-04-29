@@ -44,3 +44,20 @@ btnShareFb.addEventListener("click", () => {
   const pageUrl = "http://127.0.0.1:5500/eich_introduction/index.html";
   window.open(`http://www.facebook.com/sharer/sharer.php?u=${pageUrl}`);
 });
+
+// 페이지 링크 복사하는 기능(Clipboad API 사용)
+const copyClip = document.querySelector(".fa-clone");
+copyClip.addEventListener("click", function copyToClipBoard() {
+  let content = document.querySelector(".modalLink .link p").innerHTML;
+  // 복사하는 기능
+  navigator.clipboard
+    .writeText(content)
+    .then(() => {
+      // 복사가 잘 됐을 경우
+      console.log("Text copied to clipboard...");
+    })
+    .catch((err) => {
+      // 복사가 안 됐을 경우
+      console.log("Something went wrong", err);
+    });
+});
