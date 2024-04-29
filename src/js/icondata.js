@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("./src/json/icondata.json") // JSON 파일 불러오기
+  fetch("../src/json/icondata.json") // JSON 파일 불러오기
     .then((response) => response.json())
     .then((data) => {
       const iconContainer = document.getElementById("iconContainer");
