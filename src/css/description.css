@@ -1,0 +1,269 @@
+/* js, brave, mozilla 내용 section */
+#des {
+  /* 넓이를 border 포함한 넓이로 설정 */
+  box-sizing: border-box;
+  min-width: 340px;
+  padding: 10px 15px 10px 15px;
+}
+#des article {
+  width: 100%;
+  min-height: 130px;
+}
+.title {
+  min-height: 30px;
+  font-size: 1.4rem;
+  margin-top: 20px;
+}
+
+/* 이미지와 설명 글 담고 있는 div 태그 */
+.detail {
+  text-align: center;
+  /* 글자 및 이미지 가운데 정렬 */
+  padding-top: 10px;
+  font-size: 1.2rem;
+  min-height: 100px;
+  position: relative;
+}
+
+.detail img {
+  width: 60px;
+  height: 60px;
+}
+
+/* 토글 버튼과 부제목 담고 있는 div 태그 */
+.detail div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  height: 20px;
+  margin-bottom: 15px;
+}
+
+/* 토글 버튼들 */
+.detail button {
+  display: inline-block;
+  margin-right: 3px;
+  margin-top: 1.5px;
+  width: 13.5px;
+  height: 13.5px;
+  /* 아이콘 색깔 설정 */
+  color: var(--circle-color);
+  /* 버튼 배경색 투명으로 설정 */
+  background-color: transparent;
+}
+
+/* 파이 차트와 프로그래밍 언어 감싸는 div 태그 */
+/* 파이 차트 가운데 정렬 */
+.detail .chartWrapper {
+  min-width: 340px;
+  height: auto;
+  margin: 15px auto 50px;
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.programLang.title {
+  font-size: 10px;
+  min-height: 15px;
+  font-weight: bold;
+}
+.detail .pieChart {
+  width: 40%;
+  height: auto;
+  margin-top: 20px;
+}
+.detail .chartWrapper .programLang {
+  position: absolute;
+}
+.detail .chartWrapper .programLang:nth-child(1) {
+  top: 13%;
+  right: 25%;
+}
+.detail .chartWrapper .programLang:nth-child(2) {
+  top: 80%;
+  right: 27%;
+}
+.detail .chartWrapper .programLang:nth-child(3) {
+  top: 103%;
+  right: 46%;
+}
+.detail .chartWrapper .programLang:nth-child(4) {
+  top: 78%;
+  left: 26%;
+}
+.detail .chartWrapper .programLang:nth-child(5) {
+  top: 31%;
+  left: 22%;
+}
+.detail .chartWrapper .programLang:nth-child(6) {
+  left: 30%;
+  color: red;
+}
+.detail .chartWrapper .programLang:nth-child(7) {
+  top: -3%;
+  left: 38%;
+}
+.detail .chartWrapper .programLang:nth-child(8) {
+  top: -5%;
+  left: 44%;
+}
+/* js, brave, mozilla 설명 css 코드 */
+.detail .content {
+  line-height: 20px;
+  text-align: start;
+  padding-left: 10px;
+  height: auto;
+  margin-bottom: 15px;
+}
+/* 토글 기능 구현 시 사용할 class: hidden, toggle */
+/* 설명란 안 보이도록 하는 class */
+.hidden {
+  /* !important 사용하여 우선순위 높임(무조건 먼저 적용됨) */
+  display: none !important;
+}
+
+/* 삼각형 모양 버튼 눌렀을 때, 90도 회전 */
+.toggle {
+  transform: rotate(90deg);
+}
+
+/* 태블릿 환경일 때 */
+@media (min-width: 600px) {
+  .title {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+
+  .detail {
+    padding-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .detail p {
+    font-size: 25px;
+  }
+
+  .detail img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .detail div {
+    height: 40px;
+  }
+
+  .detail button {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    margin-top: 8px;
+  }
+
+  .detail .content {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .programLang.title {
+    font-size: 17px;
+  }
+  .detail .chartWrapper {
+    margin-top: 30px;
+    margin-bottom: 70px;
+  }
+  .detail .chartWrapper .programLang {
+    position: absolute;
+    font-size: 1.3rem;
+  }
+  .detail .chartWrapper .programLang:nth-child(1) {
+    right: 26%;
+  }
+  .detail .chartWrapper .programLang:nth-child(2) {
+    right: 29%;
+  }
+  .detail .chartWrapper .programLang:nth-child(3) {
+    top: 100%;
+    right: 48%;
+  }
+  .detail .chartWrapper .programLang:nth-child(4) {
+    top: 76%;
+    left: 28%;
+  }
+  .detail .chartWrapper .programLang:nth-child(5) {
+    left: 24%;
+  }
+  .detail .chartWrapper .programLang:nth-child(6) {
+    left: 31%;
+  }
+  .detail .chartWrapper .programLang:nth-child(7) {
+    top: -2%;
+  }
+  .detail .chartWrapper .programLang:nth-child(8) {
+    top: -6%;
+  }
+}
+
+/* 데스크탑 환경일 때 */
+@media (min-width: 1024px) {
+  #des {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  /* 타이틀 가운데 정렬 */
+  .title {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 50px;
+  }
+  .detail {
+    font-size: 50px;
+  }
+  .detail img {
+    width: 150px;
+    height: 150px;
+  }
+  .detail .content {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .programLang.title {
+    font-size: 23px;
+  }
+  .detail .chartWrapper {
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+  .detail .chartWrapper .programLang {
+    position: absolute;
+    font-size: 1.8rem;
+  }
+  .detail .chartWrapper .programLang:nth-child(1) {
+    right: 28%;
+  }
+  .detail .chartWrapper .programLang:nth-child(2) {
+    right: 29%;
+  }
+  .detail .chartWrapper .programLang:nth-child(3) {
+    top: 102%;
+    right: 50%;
+  }
+  .detail .chartWrapper .programLang:nth-child(4) {
+    left: 28%;
+  }
+  .detail .chartWrapper .programLang:nth-child(5) {
+    left: 25.5%;
+  }
+  .detail .chartWrapper .programLang:nth-child(6) {
+    top: 2%;
+    left: 32%;
+  }
+  .detail .chartWrapper .programLang:nth-child(7) {
+    top: -2%;
+    left: 39%;
+  }
+  .detail .chartWrapper .programLang:nth-child(8) {
+    top: -6%;
+  }
+}

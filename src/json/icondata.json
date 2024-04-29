@@ -1,0 +1,24 @@
+{
+    "icons": [
+        {
+            "class": "fab fa-node-js fa-square image_1",
+            "color": "var(--js-icon);",
+            "url": "https://nodejs.org/en"
+        },
+        {
+            "class": "fa-brands fa-square-x-twitter image_2",
+            "color": "var(--x-icon);",
+            "url": "https://twitter.com/BrendanEich"
+        },
+        {
+            "class": "fa-brands fa-blogger image_3",
+            "color": "#B197FC",
+            "url": "https://brendaneich.com/"
+        },
+        {
+            "class": "fa-solid fa-shield-cat image_4",
+            "color": "var(--brave-icon);",
+            "url": "https://brave.com/ko/download/"
+        }
+    ]
+}

@@ -1,0 +1,485 @@
+/* 약력 section */
+#profile {
+  box-sizing: border-box;
+  /* 박스의 크기를 테두리를 포함한 크기로 정함*/
+  min-width: 340px;
+  min-height: 250px;
+
+  padding: 20px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-top: 30px;
+}
+
+/*첫 번째 그래프(연도&직선) & 3번째 그래프(연도&직선)*/
+.first,
+.third {
+  width: 100%;
+  position: relative;
+  /* position: absolute 사용하기 위해*/
+}
+
+.first .year {
+  display: flex;
+  justify-content: space-between;
+  /*두 개의 연도 양 끝으로 배치*/
+  width: 97%;
+  margin-left: 6%;
+}
+
+.third .year {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 96%;
+  margin-left: 6%;
+}
+
+/*상단에 위치한 연도*/
+.first .year p,
+.third .year p {
+  width: 40px;
+  height: 15px;
+}
+
+.first .graph,
+.third .graph {
+  display: flex;
+  height: 20px;
+  justify-content: end;
+  /* 맨 끝으로 정렬 */
+  align-items: center;
+}
+
+/*첫 번째 & 세 번째 그래프 내의 기점(동그라미)*/
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--circle-color);
+  position: absolute;
+  /* 기점(동그라미) 위치 고정 */
+  cursor: pointer;
+}
+
+.circle:nth-child(1) {
+  /* 첫 번째 & 세 번째 그래프의 첫 번째 기점 위치 지정 */
+  right: 89%;
+}
+
+.circle:nth-child(2) {
+  /* 첫 번째 & 세 번째 그래프의  2번째 기점 위치 지정 */
+  left: 53%;
+}
+
+.circle:nth-child(3) {
+  /* 첫 번째 & 세 번째 그래프의 3번째 기점 위치 지정 */
+  right: 0px;
+}
+
+/* 첫 번째 & 세 번째 그래프 직선*/
+.line {
+  width: 90%;
+  height: 4px;
+  background-color: black;
+  margin-right: 5px;
+}
+
+/*첫 번째 & 3번째 그래프 하단의 연도*/
+.first .p,
+.third .p {
+  height: 22px;
+  width: 45px;
+  text-align: center;
+  margin-left: 49%;
+  margin-bottom: 20px;
+}
+
+.second {
+  width: 100%;
+  position: relative;
+}
+
+.second .year {
+  display: flex;
+  justify-content: space-between;
+  width: 99%;
+}
+
+.second .year p {
+  width: 30px;
+  height: 15px;
+}
+
+.second .graph {
+  display: flex;
+  height: 20px;
+  justify-content: start;
+  /*두 번째 그래프 맨 앞 쪽 정렬*/
+  align-items: center;
+}
+
+.second__line {
+  width: 92%;
+  height: 4.2px;
+  background-color: black;
+  margin-left: 5px;
+}
+
+.second__circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--circle-color);
+  position: absolute;
+  cursor: pointer;
+}
+
+/* 두 번째 그래프의 2번째 기점 */
+.second__circle:nth-child(2) {
+  left: 45%;
+}
+
+/* 두 번째 그래프의 3번째 기점 */
+.second__circle:nth-child(3) {
+  left: 92%;
+}
+
+/*두 번째 그래프 하단의 연도*/
+.second .p {
+  height: 22px;
+  width: 45px;
+  text-align: center;
+  margin-left: 41.5%;
+  margin-bottom: 20px;
+}
+
+/* 약력 그래프 말풍선 css */
+/* 말풍선의 삼각형 모양 */
+/* 모든 말풍선의 삼각형 기본 설정해주고
+   각 삼각형의 위치는 따로 설정해줌 */
+.circle .YearTri,
+.second__circle .secondYearTri {
+  position: absolute;
+  border-bottom: 5px solid var(--bubble-color);
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+.circle:nth-child(1) .YearTri,
+.second__circle:nth-child(1) .secondYearTri {
+  top: 10px;
+  left: 3px;
+}
+/*두 번째 말풍선은 위쪽으로 배치시켜야 하기 때문에 따로 설정해줌 */
+.circle:nth-child(2) .YearTri,
+.second__circle:nth-child(2) .secondYearTri {
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid var(--bubble-color);
+  top: -5px;
+  left: 3px;
+}
+.circle:nth-child(3) .YearTri,
+.second__circle:nth-child(3) .secondYearTri {
+  top: 10px;
+  left: 3px;
+}
+
+/* content 내용이 들어갈 box */
+/* 모든 box의 기본 설정해주고 
+   각 box의 위치나 크기는 따로 설정해줌 */
+.circle .YearDes,
+.second__circle .secondYearDes {
+  position: absolute;
+  font-size: 11px;
+  padding: 5px;
+  border-radius: 5px;
+  color: var(--bubble-font-color);
+  background-color: var(--bubble-color);
+}
+.circle:nth-child(1) .YearDes,
+.second__circle:nth-child(1) .secondYearDes {
+  width: 107px;
+  top: 19px;
+}
+.circle:nth-child(2) .YearDes,
+.second__circle:nth-child(2) .secondYearDes {
+  width: 132px;
+  top: -43px;
+}
+.circle:nth-child(3) .YearDes,
+.second__circle:nth-child(3) .secondYearDes {
+  width: 117px;
+  top: 19px;
+  right: 0;
+}
+
+.second__circle:nth-child(1) .secondYearDes {
+  width: 115px;
+}
+
+.second__circle:nth-child(2) .secondYearDes {
+  width: 115px;
+}
+.second__circle:nth-child(3) .secondYearDes {
+  width: 148px;
+}
+.third .graph .circle:nth-child(1) .YearDes {
+  width: 110px;
+}
+.third .graph .circle:nth-child(2) .YearDes {
+  width: 140px;
+  top: -28.5px;
+}
+
+/* 태블릿 환경일 때 */
+@media (min-width: 600px) {
+  #profile {
+    font-size: 24px;
+    padding: 40px;
+  }
+
+  .first .year {
+    width: 95%;
+  }
+
+  .first .year p,
+  .second .year p,
+  .third .year p {
+    width: 50px;
+    height: 30px;
+  }
+
+  .first .graph,
+  .third .graph {
+    height: 27px;
+  }
+
+  /* 첫 번째 & 세 번째 그래프 직선 */
+  .line {
+    height: 7.5px;
+  }
+
+  /* 첫 번째 & 세 번째 그래프 기점들 */
+  .circle {
+    width: 20px;
+    height: 20px;
+  }
+
+  .second .year {
+    width: 97%;
+  }
+
+  .first .p,
+  .third .p {
+    margin-left: 51%;
+    margin-bottom: 60px;
+  }
+
+  .second .p {
+    margin-left: 43%;
+    margin-bottom: 60px;
+  }
+
+  .second .graph {
+    height: 27px;
+  }
+
+  .second__line {
+    height: 7.5px;
+  }
+
+  .second__circle {
+    width: 20px;
+    height: 20px;
+  }
+  /* 말풍선 css */
+  .circle .YearTri,
+  .second__circle .secondYearTri {
+    position: absolute;
+    border-bottom: 10px solid var(--bubble-color);
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+  .circle .YearDes,
+  .second__circle .secondYearDes {
+    position: absolute;
+    font-size: 13px;
+    padding: 8px;
+  }
+  .circle:nth-child(1) .YearTri,
+  .second__circle:nth-child(1) .secondYearTri {
+    top: 10px;
+    left: 3px;
+  }
+  .circle:nth-child(1) .YearDes {
+    width: 130px;
+    top: 29px;
+  }
+  .second__circle:nth-child(1) .secondYearDes {
+    width: 138px;
+    top: 29px;
+  }
+  .circle:nth-child(2) .YearTri,
+  .second__circle:nth-child(2) .secondYearTri {
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid var(--bubble-color);
+    top: -9px;
+    left: 2px;
+  }
+  .circle:nth-child(2) .YearDes {
+    width: 160px;
+    top: -58px;
+  }
+  .second__circle:nth-child(2) .secondYearDes {
+    width: 138px;
+    top: -58px;
+  }
+  .circle:nth-child(3) .YearTri,
+  .second__circle:nth-child(3) .secondYearTri {
+    top: 10px;
+    left: 0;
+  }
+  .circle:nth-child(3) .YearDes {
+    width: 143px;
+    top: 27px;
+  }
+  .second__circle:nth-child(3) .secondYearDes {
+    width: 178px;
+    top: 27px;
+  }
+  .third .graph .circle:nth-child(1) .YearDes {
+    width: 133px;
+  }
+  .third .graph .circle:nth-child(2) .YearDes {
+    width: 168px;
+    top: -41px;
+  }
+}
+
+/* 데스크탑 환경일 때 */
+@media (min-width: 1024px) {
+  #profile {
+    font-size: 34px;
+    padding: 50px 170px;
+  }
+
+  .first .year {
+    width: 95%;
+  }
+
+  .first .year p,
+  .second .year p,
+  .third .year p {
+    width: 80px;
+    height: 50px;
+  }
+
+  .first .graph,
+  .third .graph {
+    height: 27px;
+  }
+
+  /* 첫 번째 & 세 번째 그래프 직선 */
+  .line {
+    height: 11px;
+  }
+
+  /* 첫 번째 & 세 번째 그래프 기점들 */
+  .circle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .second .year {
+    width: 97%;
+  }
+
+  .first .p,
+  .third .p {
+    margin-left: 50%;
+    margin-bottom: 70px;
+  }
+
+  .second .p {
+    margin-left: 43%;
+    margin-bottom: 70px;
+  }
+
+  .second .graph {
+    height: 27px;
+  }
+
+  .second__line {
+    height: 11px;
+  }
+
+  .second__circle {
+    width: 30px;
+    height: 30px;
+  }
+  /* 말풍선 css */
+  .circle .YearTri,
+  .second__circle .secondYearTri {
+    position: absolute;
+    border-bottom: 15px solid var(--bubble-color);
+    border-top: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  }
+  .circle .YearDes,
+  .second__circle .secondYearDes {
+    position: absolute;
+    font-size: 17px;
+    padding: 10px;
+  }
+  .circle:nth-child(1) .YearTri,
+  .second__circle:nth-child(1) .secondYearTri {
+    top: 15px;
+    left: 3px;
+  }
+  .circle:nth-child(1) .YearDes {
+    width: 168px;
+    top: 43px;
+  }
+  .second__circle:nth-child(1) .secondYearDes {
+    width: 179px;
+    top: 43px;
+  }
+  .circle:nth-child(2) .YearTri,
+  .second__circle:nth-child(2) .secondYearTri {
+    border-bottom: 15px solid transparent;
+    border-top: 15px solid var(--bubble-color);
+    top: -14px;
+    left: 2px;
+  }
+  .circle:nth-child(2) .YearDes {
+    width: 208px;
+    top: -78px;
+  }
+  .second__circle:nth-child(2) .secondYearDes {
+    width: 179px;
+    top: -78px;
+  }
+  .circle:nth-child(3) .YearTri,
+  .second__circle:nth-child(3) .secondYearTri {
+    top: 15px;
+    left: 0;
+  }
+  .circle:nth-child(3) .YearDes {
+    width: 185px;
+    top: 42px;
+  }
+  .second__circle:nth-child(3) .secondYearDes {
+    width: 232px;
+    top: 42px;
+  }
+  .third .graph .circle:nth-child(1) .YearDes {
+    width: 173px;
+  }
+  .third .graph .circle:nth-child(2) .YearDes {
+    width: 219px;
+    top: -55px;
+  }
+}

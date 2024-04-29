@@ -1,0 +1,65 @@
+.scroll-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+  background-color: transparent;
+  font-size: 3.6rem;
+  border-radius: 50%;
+}
+
+.scroll-up {
+  bottom: 20px;
+  left: 20px;
+}
+
+.scroll-down {
+  bottom: 20px;
+  right: 20px;
+}
+/* 라이트 / 다크 모드 버튼 css */
+#mode {
+  width: 80px;
+  height: auto;
+  background-color: purple;
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 10px;
+  position: fixed;
+  bottom: 15px;
+  right: 55px;
+  /*그림자 적용*/
+  box-shadow: 0 0 6px lightgray;
+}
+
+@media (min-width: 600px) {
+  .scroll-button {
+    font-size: 4rem;
+  }
+  #mode {
+    width: 90px;
+    font-size: 12px;
+    bottom: 18px;
+    right: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .scroll-button {
+    font-size: 5rem;
+  }
+  #mode {
+    font-size: 15px;
+    width: 110px;
+    right: 75px;
+    bottom: 22px;
+  }
+}
+
+/* 
+@media (min-width:1400px) {
+  .scroll-button {
+    font-size: 6rem;
+  }
+} */

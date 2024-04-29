@@ -1,0 +1,78 @@
+/* css 초기 설정 : https://blog.pumpkin-raccoon.com/72(참고 블로그) >> 수정해도 됩니다! */
+
+@import "/eich_introduction/src/css/container.css";
+@import "/eich_introduction/src/css/description.css";
+@import "/eich_introduction/src/css/footer.css";
+@import "/eich_introduction/src/css/header.css";
+@import "/eich_introduction/src/css/intro.css";
+@import "/eich_introduction/src/css/main.css";
+@import "/eich_introduction/src/css/profile.css";
+@import "/eich_introduction/src/css/share.css";
+@import "/eich_introduction/src/css/updown.css";
+
+:root {
+  /* --main-color1: #8294c4;
+  --main-color2: #acb1d6;
+  --main-color3: #dbdfea;
+  --main-color4: #ffead2; */
+  /* 그래프 안 동그라미 색깔 전역변수로 선언 */
+  --circle-color: #7353ea;
+  --bubble-color: #d0b6e8;
+  --bubble-font-color: #694281;
+
+  --header-color1: #62736a;
+  --header-color2: #98a191;
+
+  --dot-color: #6c8c71;
+
+  --footer-color: #5f5e5e;
+
+  --js-icon: #5aa14a;
+  --x-icon: #1a1a1a;
+  --brave-icon: #ff2101;
+  --discord-icon: #5765f2;
+  --kakao-icon: #fae100;
+  --facebook-icon: #0964fe;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+input:focus {
+  border: none;
+}
+
+button {
+  background-color: none;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-width: 340px;
+}
+
+#frame {
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}

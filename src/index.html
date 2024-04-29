@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<!-- 웹 접근성 고려하여 kr로 수정-->
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/eich_introduction/src/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <section id="frame">
+      <header>
+        <img
+          src="/eich_introduction/src/assets/images/newJs.png"
+          alt="js icon"
+        />
+        <nav>
+          <ul>
+            <li class="active">
+              <a href="#home">Home</a>
+            </li>
+            <li><a href="#introduction">About</a></li>
+            <li><a href="#profile">Biography</a></li>
+            <li><a href="#des">Career</a></li>
+            <li><a href="#container">Guest</a></li>
+            <span class="animation"></span>
+          </ul>
+        </nav>
+      </header>
+      <section>
+        <main id="home">
+          <ul class="slider">
+            <p class="arrow left">〈</p>
+            <li class="slide active">
+              <img
+                src="/eich_introduction/src/assets/images/eich2.png"
+                alt="eich image 1"
+              />
+            </li>
+            <li class="slide">
+              <img
+                src="/eich_introduction/src/assets/images/brendan2.png"
+                alt="eich image 2"
+              />
+            </li>
+            <li class="slide">
+              <img
+                src="/eich_introduction/src/assets/images/brendan.png"
+                alt="eich image 3"
+              />
+            </li>
+            <div class="dotList">
+              <p class="dot active"></p>
+              <p class="dot"></p>
+              <p class="dot"></p>
+            </div>
+            <div class="content">
+              <h3>자바스크립트의 아버지,</h3>
+              <p>Brendan Eich에 대해 알아봅시다.</p>
+            </div>
+            <p class="arrow right">〉</p>
+          </ul>
+        </main>
+      </section>
+      <section id="introduction" class="introduction">
+        <!-- 아이크씨 얼굴사진 -->
+        <img
+          class="first_picture"
+          src="/eich_introduction/src/assets/images/eich1.PNG"
+          alt="아이크1"
+        />
+
+        <article>
+          <div class="name">
+            <h1>Brendan Eich</h1>
+            <h2>브랜든 아이크</h2>
+          </div>
+          <!-- 사진밑에 간단한 소개글 -->
+          <div class="simpleintro">
+            <h2>1961년 7월 4일생</h2>
+            <h2>자바스크립트 창시</h2>
+            <h2>브라이 브레이즈 브라우저 CEO</h2>
+          </div>
+          <div class="bottom_imagegroup" id="iconContainer"></div>
+        </article>
+      </section>
+      <!-- 약력 section -->
+      <section id="profile">
+        <div class="first">
+          <div class="first year">
+            <p>1964</p>
+            <p>1983</p>
+          </div>
+          <div class="first graph">
+            <div class="circle">
+              <p class="YearTri hidden"></p>
+              <p class="YearDes hidden">
+                미국 펜실베니아 주<br />피츠버그 출생
+              </p>
+            </div>
+            <div class="circle">
+              <p class="YearTri hidden"></p>
+              <p class="YearDes hidden">
+                미국 산타 클라라 대학교<br />
+                수학 컴퓨터 공학 전공
+              </p>
+            </div>
+            <div class="circle">
+              <p class="YearTri hidden"></p>
+              <p class="YearDes hidden">
+                미국 일리노이 대학교<br />
+                컴퓨터 공학 석사
+              </p>
+            </div>
+            <div class="line"></div>
+          </div>
+          <p class="first p">1979</p>
+        </div>
+        <div class="second">
+          <div class="second year">
+            <p>1995</p>
+            <p>1985</p>
+          </div>
+          <div class="second graph">
+            <div class="second__circle">
+              <p class="secondYearTri hidden"></p>
+              <p class="secondYearDes hidden">
+                Silicon Graphics<br />소프트웨어 엔지니어
+              </p>
+            </div>
+            <div class="second__circle">
+              <p class="secondYearTri hidden"></p>
+              <p class="secondYearDes hidden">
+                MicroUnity<br />소프트웨어 엔지니어
+              </p>
+            </div>
+            <div class="second__circle">
+              <p class="secondYearTri hidden"></p>
+              <p class="secondYearDes hidden">
+                Netscape 수석 엔지니어 및<br />치프 아키텍트 엔지니어
+              </p>
+            </div>
+            <div class="second__line"></div>
+          </div>
+          <p class="second p">1992</p>
+        </div>
+        <div class="third">
+          <div class="third year">
+            <p>2003</p>
+            <p>~</p>
+          </div>
+          <div class="third graph">
+            <div class="circle">
+              <p class="YearTri hidden"></p>
+              <p class="YearDes hidden">모질라 CTO 및 CEO</p>
+            </div>
+            <div class="circle">
+              <p class="YearTri hidden"></p>
+              <p class="YearDes hidden">브레이브 소프트웨어 CEO</p>
+            </div>
+            <div class="circle"></div>
+            <div class="line"></div>
+          </div>
+          <p class="third p">2005</p>
+        </div>
+      </section>
+
+      <!--js, brave, mozilla 설명 section-->
+      <section id="des">
+        <article>
+          <div class="title">
+            <h2>JavaScript</h2>
+          </div>
+          <div class="detail">
+            <img
+              src="/eich_introduction/src/assets/icons/jsicon.png"
+              alt="js_icon"
+            />
+            <div>
+              <button id="jsToggleBtn">
+                <i class="fa-solid fa-caret-right"></i>
+              </button>
+              <p>JavaScript란?</p>
+            </div>
+            <!-- 파이 차트 -->
+            <p class="programLang title hidden">
+              가장 인기있는 프로그래밍 언어 Top 7
+            </p>
+            <div class="chartWrapper programLang hidden">
+              <p class="programLang hidden">Python<br />26.7%</p>
+              <p class="programLang hidden">C<br />16.7%</p>
+              <p class="programLang hidden">C++<br />16.1%</p>
+              <p class="programLang hidden">Java<br />15%</p>
+              <p class="programLang hidden">C#<br />11.4%</p>
+              <p class="programLang hidden">Java<br />Script<br />5%</p>
+              <p class="programLang hidden">Go<br />3%</p>
+              <p class="programLang hidden">etc<br />6.1%</p>
+              <div class="pieChart hidden">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+
+            <p class="content hidden">
+              <strong>설계자</strong>: <a href="#introduction">브랜든 아이크</a
+              ><br />
+              <strong>개발자</strong>:
+              <a href="https://netscape-browser.softonic.kr/" target="_blank"
+                >넷스케이프</a
+              >,
+              <a href="https://www.mozilla.org/ko/" target="_blank"
+                >모질라 재단</a
+              >,
+              <a
+                href="https://ecma-international.org/publications-and-standards/standards/ecma-262/"
+                target="_blank"
+                >Ecma 인터내셔널</a
+              ><br />
+              <strong>미리보기 버전</strong>: ECSMAScript 2025<br />
+              <strong>발표일</strong>: 1995년 12월 4일<br />
+              <strong>최근 버전 출시일</strong>: 2023년 6월<br /><br />
+              <strong>자바스크립트</strong>는 객체 기반의 스크립트 프로그래밍
+              언어이다. 이 언어는 웹 브라우저 내에서 주로 사용되며, 다른 응용
+              프로그램의 내장 객체에도 접근할 수 있는 기능을 가지고 있다. 또한
+              Node.js와 같은 런타임 환경과 같이 서버 프로그래밍에도 사용되고
+              있다. 자바스크립트는 본래 넷스케이프 커뮤니케이션즈 코퍼레이션의
+              브렌던 아이크(Brendan Eich)가 처음에는 모카(Mocha)라는 이름으로,
+              나중에는 라이브스크립트(LiveScript)라는 이름으로 개발하였으며,
+              최종적으로 자바스크립트가 되었다. 자바스크립트가 썬
+              마이크로시스템즈의 자바와 구문이 유사한 점도 있지만, 이는 사실 두
+              언어 모두 C 언어의 기본 구문에 바탕을 뒀기 때문이고, 자바와
+              자바스크립트는 직접적인 연관성은 약하다. 이름과 구문 외에는
+              자바보다 셀프나 스킴과 유사성이 많다. 자바스크립트는
+              ECMA스크립트(ECMAScript)의 표준 사양을 가장 잘 구현한 언어로
+              인정받고 있으며 ECMAScript 5(ES5)까지는 대부분의 브라우저에서
+              기본적으로 지원되었으나 ECMAScript 6 이후부터는 브라우저 호환성을
+              위해 트랜스파일러로 컴파일된다.
+            </p>
+          </div>
+        </article>
+        <article>
+          <div class="title">
+            <h2>Brave</h2>
+          </div>
+          <div class="detail">
+            <img
+              src="/eich_introduction/src/assets/images/brave_brower.png"
+              alt="brave_browser_img"
+            />
+            <div>
+              <button id="braveToggleBtn">
+                <i class="fa-solid fa-caret-right"></i>
+              </button>
+              <p>Brave란?</p>
+            </div>
+            <p class="content hidden">
+              <strong>개발:</strong>
+              <a href="https://brave.com/" target="_blank">Brave Software</a>,
+              <a href="#introduction">브랜든 아이크</a><br />
+              <strong>개발자:</strong> 브레이브 소프트웨어<br />
+              <strong>라이선스:</strong> 브라우저 - MPL 2.0, Privacy Badger -
+              GPLv3, HTTPS Everywhere - GPLv2<br /><br />
+              <strong>브레이브(Brave)</strong>는 Brave Software, Inc.에서
+              개발하는 크로미엄 웹 브라우저에 기반한
+              <strong>자유-오픈 소스 웹 브라우저</strong>이다. 브라우저에
+              기본적으로 광고 차단, 추적기 차단, HTTPS 업그레이드, 브라우저 지문
+              채취 방어, 스크립트 차단 등의 기능이 내장되어 있다. 이
+              <strong>'브레이브 실드'</strong>는 설정에서 다양한 사용자 설정이
+              가능하기 때문에 브레이브 실드를 더 엄격하거나 느슨하게 차단하도록
+              바꿀 수 있다. 다른 광고 차단 프로그램에 뒤지지 않는 성능을
+              보여주며, 광고 차단 부가 기능을 따로 설치할 필요가 없기 때문에
+              설계상으로 메모리를 더 적게 사용한다.<br /><br />브레이브
+              소프트웨어는 검색 엔진의 개인정보보호에도 관심을 가졌고, 덕덕고와
+              협업을 발표하였다. 각 국가에서 유럽의 <strong>GDPR</strong> 같은
+              개인정보 보호를 강제하는 법안이 지속적으로 나오기 때문에 구글이
+              아닌 덕덕고의 사용이 권장되고 있다. 토어 네트워크를 이용한 비공개
+              탭의 검색 엔진은 덕덕고가 기본값이 된다. 덕분에 유튜브 프리미엄을
+              구매하지 않아도 광고 없이 볼 수 있다. 다만 유튜브도 브레이브를
+              막으려 하는 것인지 유튜브와 브레이브가 서로 업데이트를 계속하며
+              막혔다 뚫렸다 반복되는 것으로 추정된다
+            </p>
+          </div>
+        </article>
+        <article>
+          <div class="title">
+            <h2>Mozilla</h2>
+          </div>
+          <div class="detail">
+            <img
+              src="/eich_introduction/src/assets/images/mozilla.png"
+              alt="mozilla_img"
+            />
+            <div>
+              <button id="mozillaToggleBtn">
+                <i class="fa-solid fa-caret-right"></i>
+              </button>
+              <p>Mozilla란?</p>
+            </div>
+            <p class="content hidden">
+              <strong>모질라(Mozilla)</strong>는 1998년 미국 AOL의 넷스케이프
+              팀이 중심이 되어 구성한 자유 소프트웨어 커뮤니티이다.
+              <a href="https://www.mozilla.org/ko/firefox/new/" target="_blank"
+                >파이어폭스 웹 브라우저</a
+              >,
+              <a href="https://www.thunderbird.net/ko/" target="_blank"
+                >썬더버드 이메일</a
+              >,
+              <a href="https://www.bugzilla.org/" target="_blank">버그질라</a>
+              오류 추적기 등을 개발했다. 로고는 일본의 괴물 영화에 나오는
+              고질라이다. 원래 '모질라'라는 이름은
+              <strong>'모자이크 킬러(Mosaic Killer)'</strong>에서 따온 것으로,
+              넷스케이프 내비게이터 1.0에서부터 코드명으로 쓰였다.
+              넷스케이프에서 브라우저 유저 에이전트(User Agent) 조회에
+              Mozilla/x.x와 같은 식으로 응답한 이유가 그것. 이후 넷스케이프가
+              오픈소스로 바뀌면서 기반이 되는 개발 버전의 이름이 아예
+              모질라(모질라 애플리케이션 스위트)로 바뀌었다.<br /><br />
+              <strong>모질라 애플리케이션 스위트</strong>는 넷스케이프
+              커뮤니케이터의 소스 및 구성을 가져와서 웹 브라우저+메일
+              클라이언트+웹페이지 에디터+IRC 클라이언트+기타 개발 관련 도구로
+              이루어져 있으며, 다른 브라우저들의 개발에 이용될 수 있는 견본의
+              역할을 담당하였다. 하지만 새로 개발한 제품이다 보니 품질을
+              향상시키는데 상당한 시간이 걸렸다. 결국 1.8 베타1을 마지막으로
+              모질라 파이어폭스와 모질라 썬더버드로 계보를 넘기고 개발이
+              중단되었으며, 모질라 외부 커뮤니티인 시몽키 프로젝트에서 기존
+              모질라의 구성을 유지한 상태로 최신 기술을 적용하여 시몽키를 개발
+              중이다.<br /><br />
+              한편으로 모질라는 마스코트로서 모질라 재단 및 모질라 애플리케이션
+              스위트에서 이용된 마스코트의 이름이기도 하다. 현재는 활동 중단(?)
+              상태. 하지만 아직 모질라 재단의 버그질라(버그 관리
+              데이터베이스)에서 버그 검색을 하면 열심히 버그를 잡아먹는 모습을
+              볼 수 있다.
+            </p>
+          </div>
+        </article>
+      </section>
+      <section class="container" id="container">
+        <div class="box1">
+          <p>방명록</p>
+          <button class="box2">
+            <i class="fa-solid fa-pen-to-square"></i>
+          </button>
+          <div class="modal">
+            <div class="modalContent">
+              <span class="close">&times;</span>
+              <form class="modalForm">
+                <label for="userId">이름</label>
+                <input
+                  type="text"
+                  class="userId"
+                  name="userId"
+                  required
+                  maxlength="7"
+                /><br /><br />
+                <label for="content">내용</label>
+                <textarea
+                  class="content"
+                  name="content"
+                  required
+                  maxlength="50"
+                ></textarea
+                ><br /><br />
+                <button type="submit">등록</button>
+              </form>
+            </div>
+          </div>
+          <div class="editModal">
+            <div class="editModalContent">
+              <span class="closeEditModal">&times;</span>
+              <form class="editModalForm">
+                <label for="editUserId">이름</label>
+                <input
+                  type="text"
+                  class="editUserId"
+                  name="editUserId"
+                  required
+                /><br /><br />
+                <label for="editContent">내용</label>
+                <textarea
+                  class="editContent"
+                  name="editContent"
+                  required
+                ></textarea
+                ><br /><br />
+                <button type="submit">수정</button>
+              </form>
+            </div>
+          </div>
+          <div class="additionalBoxes"></div>
+        </div>
+      </section>
+
+      <div class="modalOverlay" onclick="closeModal()"></div>
+      <div class="shareModal">
+        <div class="modalTop">
+          <p>Share</p>
+          <button onclick="closeModal()">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </button>
+        </div>
+        <div class="modalIcons">
+          <div class="icon">
+            <button class="x"><i class="fa-brands fa-x-twitter"></i></button>
+            <p>X</p>
+          </div>
+          <div class="icon">
+            <button class="fb"><i class="fa-brands fa-facebook"></i></button>
+            <p>Facebook</p>
+          </div>
+          <div class="icon">
+            <a class="kk" href="javascript:shareMessage()"
+              ><i class="fa-solid fa-comment"></i
+            ></a>
+            <p>Kakao</p>
+          </div>
+          <div class="icon">
+            <button class="dc"><i class="fa-brands fa-discord"></i></button>
+            <p>Discord</p>
+          </div>
+        </div>
+        <div class="modalLink">
+          <p>Page Link</p>
+          <div class="link">
+            <p>https://127.0.0.1</p>
+            <button><i class="fa-regular fa-clone"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="teamIntroduction">
+          <h1>1팀</h1>
+          <p>Developers</p>
+          <button>
+            <i onclick="openModal()" class="fa-regular fa-clone"></i>
+          </button>
+        </div>
+        <div class="members" id="members-container"></div>
+      </footer>
+      <!-- 페이지업-->
+      <button class="scroll-button" onclick="scrollToTop()">
+        <i class="fa-solid fa-circle-arrow-up"></i>
+      </button>
+
+      <!-- 페이지 다운 -->
+      <!-- <button class="scroll-button" onclick="scrollToBottom()">↡</button> -->
+      <div style="height: auoto"></div>
+      <button id="mode">다크모드</button>
+    </section>
+
+    <!-- intergrity에 "" 제외한 문자열 다 지운 후 config.js 파일에서 KAKAO_INTEGRITY 키 복붙해주세요! -->
+    <script
+      src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.1/kakao.min.js"
+      integrity="sha384-kDljxUXHaJ9xAb2AzRd59KxjrFjzHa5TAoFQ6GbYTCAG0bjM55XohjjDT7tDDC01"
+      crossorigin="anonymous"
+    ></script>
+    <!-- 파이 차트(chart.js 라이브러리 사용) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script src="/eich_introduction/src/js/profile.js"></script>
+    <script src="/eich_introduction/src/js/nav.js"></script>
+    <script src="/eich_introduction/src/js/updown.js"></script>
+    <script src="/eich_introduction/src/js/container.js"></script>
+    <script src="/eich_introduction/src/js/footmember.js"></script>
+    <script src="/eich_introduction/src/js/shareModal.js"></script>
+    <script src="/eich_introduction/src/js/slider.js"></script>
+    <script src="/eich_introduction/src/js/chart.js"></script>
+    <script src="/eich_introduction/src/js/icondata.js"></script>
+  </body>
+</html>
