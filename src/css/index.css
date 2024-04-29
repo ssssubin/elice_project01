@@ -1,14 +1,14 @@
 /* css 초기 설정 : https://blog.pumpkin-raccoon.com/72(참고 블로그) >> 수정해도 됩니다! */
 
-@import "/eich_introduction/src/css/container.css";
-@import "/eich_introduction/src/css/description.css";
-@import "/eich_introduction/src/css/footer.css";
-@import "/eich_introduction/src/css/header.css";
-@import "/eich_introduction/src/css/intro.css";
-@import "/eich_introduction/src/css/main.css";
-@import "/eich_introduction/src/css/profile.css";
-@import "/eich_introduction/src/css/share.css";
-@import "/eich_introduction/src/css/updown.css";
+@import "./container.css";
+@import "./description.css";
+@import "./footer.css";
+@import "./header.css";
+@import "./intro.css";
+@import "./main.css";
+@import "./profile.css";
+@import "./share.css";
+@import "./updown.css";
 
 :root {
   /* --main-color1: #8294c4;
