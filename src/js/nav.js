@@ -1,37 +1,73 @@
-const headerHeight = document.querySelector("header").offsetHeight
+const animation = document.querySelector(".animation");
+const sections = document.querySelectorAll("section");
+const headerHeight = document.querySelector("header").offsetHeight; // header 높이 계산
+const navList = document.querySelectorAll("nav ul li");
 
-const navList = document.querySelectorAll("nav ul li")
+// 스크롤 이벤트 핸들러
+window.addEventListener("scroll", () => {
+  let current = ""; // 현재 보여지는 섹션의 ID를 저장할 변수
 
-navList.forEach((nav, idx) => {
-  nav.addEventListener("click", addActiveItem)
-  const aTag = nav.querySelector("a")
-  aTag.addEventListener("click", scrollSmooth)
-})
+  // 각 섹션에 대한 처리
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - headerHeight; // 섹션의 시작 위치
+    const sectionBottom = sectionTop + section.offsetHeight; // 섹션의 끝 위치
 
-function addActiveItem() {
-  const activeItem = document.querySelector("nav ul li.active")
-
-  activeItem.classList.remove("active")
-
-  this.classList.add("active")
-}
-
-function scrollSmooth(e) {
-  e.preventDefault();
-  const targetId = this.getAttribute("href")
-  const targetSection = document.querySelector(targetId)
-
-  const targetPosition = targetSection.offsetTop - headerHeight
-
-  window.scrollTo({
-    top: targetPosition,
-    behavior: 'smooth'
+    // 태블릿 환경일 때
+    if (matchMedia("min-width : 600px")) {
+      if (window.scrollY >= 0 && window.scrollY <= 420) {
+        current = "home";
+      } else if (
+        window.scrollY >= sectionTop &&
+        window.scrollY <= sectionBottom
+      ) {
+        current = section.getAttribute("id");
+      }
+    }
+    // 데스크탑 환경일 때
+    else if (matchMedia("min-width:1024px")) {
+      if (window.scrollY >= 0 && window.scrollY <= 620) {
+        current = "home";
+      } else if (
+        window.scrollY >= sectionTop &&
+        window.scrollY <= sectionBottom
+      ) {
+        current = section.getAttribute("id"); // 현재 섹션의 ID 저장
+      }
+    }
+    // 모바일 환경일 때
+    else {
+      if (window.scrollY >= 0 && window.scrollY <= 160) {
+        current = "home";
+      } else if (
+        window.scrollY >= sectionTop &&
+        window.scrollY <= sectionBottom
+      ) {
+        current = section.getAttribute("id"); // 현재 섹션의 ID 저장
+      }
+    }
   });
+
+  // 네비게이션 메뉴에 대한 처리
+  navList.forEach((navItem) => {
+    navItem.classList.remove("active"); // 모든 네비게이션 메뉴에서 활성 클래스 제거
+
+    const navLink = navItem.querySelector("a"); // 네비게이션 메뉴의 링크
+
+    // 현재 섹션과 링크가 일치하는 경우
+    if (navLink.getAttribute("href").substring(1) === current) {
+      navItem.classList.add("active"); // 현재 보여지는 섹션에 해당하는 네비게이션 메뉴에 활성 클래스 추가
+      setAnimation(navLink); // 마커 위치 업데이트
+    }
+  });
+});
+
+// 마커 위치 업데이트 함수
+function setAnimation(e) {
+  animation.style.left = e.offsetLeft + "px"; // 마커의 왼쪽 위치 설정
+  animation.style.width = e.offsetWidth + "px"; // 마커의 너비 설정
 }
 
-// home화면은 header가 얹혀져 있기때문에, 그만큼 위에 padding 값을 줘서 밀어내 home 화면을 보이게함.
-
-// 함수를 사용하여 headerHeight를 동적으로 계산합니다.
+// // 함수를 사용하여 headerHeight를 동적으로 계산합니다.
 function calculateHeaderHeight() {
   const headerHeight = document.querySelector("header").offsetHeight;
   const homePlusHeight = document.querySelector("#home");
@@ -41,40 +77,3 @@ function calculateHeaderHeight() {
 calculateHeaderHeight();
 
 window.addEventListener("resize", calculateHeaderHeight);
-
-
-// // 스크롤 이벤트를 감지하여 활성 상태를 변경합니다.
-// window.addEventListener("scroll", function () {
-//   const scrollPosition = window.scrollY; // 현재 스크롤 위치
-//   const sectionList = document.querySelectorAll("section")
-
-//   // 각 섹션의 위치를 비교하여 활성 상태를 변경합니다.
-//   sectionList.forEach(section => {
-//     const sectionTop = section.offsetTop - headerHeight; // 섹션의 상단 위치
-//     const sectionBottom = section.offsetTop + section.offsetHeight;
-
-//     // 스크롤 위치가 섹션의 범위에 포함되는지 확인합니다.
-//     if (scrollPosition >= sectionTop || scrollPosition < sectionBottom) {
-//       // 해당 섹션에 도달했을 때, 해당 섹션의 ID 값을 가져와서 네비게이션 메뉴의 활성 상태를 변경합니다.
-//       const sectionId = section.getAttribute("id");
-//       navList.forEach(function (navItem) {
-//         console.log(navItem)
-//         navItem.classList.remove("active"); // 모든 네비게이션 메뉴의 활성 상태를 제거합니다.
-//         if (navItem.querySelector("a").getAttribute("href") === `#${sectionId}`) {
-//           navItem.classList.add("active"); // 해당 섹션에 대응하는 네비게이션 메뉴의 활성 상태를 추가합니다.
-//         }
-//       });
-//     }
-//     else if (scrollPosition < headerHeight) {
-//       navList.forEach(function (navItem) {
-//         if (navItem.querySelector("a").getAttribute("href") === "#home") {
-//           navItem.classList.add("active");
-//         }
-//       })
-//     }
-
-
-//   });
-// });
-
-// function changeActive()
