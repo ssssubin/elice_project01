@@ -48,7 +48,7 @@
   width: 13.5px;
   height: 13.5px;
   /* 아이콘 색깔 설정 */
-  color: var(--circle-color);
+  color: var(--circle-color2);
   /* 버튼 배경색 투명으로 설정 */
   background-color: transparent;
 }

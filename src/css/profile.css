@@ -56,12 +56,14 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: var(--circle-color);
+  background-color: var(--circle-color1);
   position: absolute;
   /* 기점(동그라미) 위치 고정 */
   cursor: pointer;
 }
-
+.third .graph .circle {
+  background-color: var(--circle-color3);
+}
 .circle:nth-child(1) {
   /* 첫 번째 & 세 번째 그래프의 첫 번째 기점 위치 지정 */
   right: 89%;
@@ -130,7 +132,7 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: var(--circle-color);
+  background-color: var(--circle-color2);
   position: absolute;
   cursor: pointer;
 }
@@ -171,11 +173,9 @@
   top: 10px;
   left: 3px;
 }
-/*두 번째 말풍선은 위쪽으로 배치시켜야 하기 때문에 따로 설정해줌 */
+
 .circle:nth-child(2) .YearTri,
 .second__circle:nth-child(2) .secondYearTri {
-  border-bottom: 5px solid transparent;
-  border-top: 5px solid var(--bubble-color);
   top: -5px;
   left: 3px;
 }
@@ -194,7 +194,6 @@
   font-size: 11px;
   padding: 5px;
   border-radius: 5px;
-  color: var(--bubble-font-color);
   background-color: var(--bubble-color);
 }
 .circle:nth-child(1) .YearDes,

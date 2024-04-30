@@ -23,11 +23,11 @@
   transform: translate(-50%, -50%);
 }
 
-.shareModal > div {
+.shareModal>div {
   margin-bottom: 0.8rem;
 }
 
-.shareModal > div:nth-last-child(1) {
+.shareModal>div:nth-last-child(1) {
   margin: 0;
 }
 
@@ -38,7 +38,7 @@
   justify-content: space-between;
 }
 
-.shareModal .modalTop > p {
+.shareModal .modalTop>p {
   font-size: 2rem;
 }
 
@@ -54,11 +54,11 @@
   align-items: center;
 }
 
-.shareModal .modalIcons .icon > p {
+.shareModal .modalIcons .icon>p {
   font-size: 1rem;
 }
 
-.shareModal .modalIcons .icon > button {
+.shareModal .modalIcons .icon>button {
   padding: 1rem;
   background-color: #eee;
   border-radius: 50%;
@@ -67,8 +67,9 @@
   justify-content: center;
   align-items: center;
 }
+
 /* 카카오 버튼 */
-.shareModal .modalIcons .icon > a {
+.shareModal .modalIcons .icon>a {
   padding: 1.4rem;
   background-color: #eee;
   border-radius: 50%;
@@ -77,6 +78,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .shareModal .modalIcons .x:hover {
   background-color: var(--x-icon);
   color: #f5f5f5;
@@ -92,8 +94,8 @@
   color: #f5f5f5;
 }
 
-.shareModal .modalIcons .dc:hover {
-  background-color: var(--discord-icon);
+.shareModal .modalIcons .mail:hover {
+  background-color: var(--email-icon);
   color: #f5f5f5;
 }
 
@@ -102,7 +104,7 @@
   flex-direction: column;
 }
 
-.shareModal .modalLink > p {
+.shareModal .modalLink>p {
   font-size: 1rem;
 }
 
@@ -116,13 +118,13 @@
   border-radius: 0.5rem;
 }
 
-.shareModal .modalLink .link > p {
+.shareModal .modalLink .link>p {
   width: 85%;
   display: flex;
   justify-content: center;
 }
 
-.shareModal .modalLink .link > button {
+.shareModal .modalLink .link>button {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -133,24 +135,24 @@
     width: 28rem;
   }
 
-  .shareModal > div {
+  .shareModal>div {
     margin-bottom: 1rem;
   }
 
-  .shareModal .modalTop > p {
+  .shareModal .modalTop>p {
     font-size: 2.2rem;
   }
 
-  .shareModal .modalIcons .icon > p {
+  .shareModal .modalIcons .icon>p {
     font-size: 1.2rem;
   }
 
-  .shareModal .modalIcons .icon > button {
+  .shareModal .modalIcons .icon>button {
     padding: 1.1rem;
     font-size: 1.7rem;
   }
 
-  .shareModal .modalLink > p {
+  .shareModal .modalLink>p {
     font-size: 1.2rem;
   }
 
@@ -165,24 +167,24 @@
     width: 32rem;
   }
 
-  .shareModal > div {
+  .shareModal>div {
     margin-bottom: 1.2rem;
   }
 
-  .shareModal .modalTop > p {
+  .shareModal .modalTop>p {
     font-size: 2.4rem;
   }
 
-  .shareModal .modalIcons .icon > p {
+  .shareModal .modalIcons .icon>p {
     font-size: 1.4rem;
   }
 
-  .shareModal .modalIcons .icon > button {
+  .shareModal .modalIcons .icon>button {
     padding: 1.2rem;
     font-size: 1.9rem;
   }
 
-  .shareModal .modalLink > p {
+  .shareModal .modalLink>p {
     font-size: 1.4rem;
   }
 

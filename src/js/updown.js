@@ -18,6 +18,7 @@ function scrollToBottom() {
 
 const modeBtn = document.querySelector("#mode"); // 라이트/다크모드 버튼
 const everyThing = document.querySelector("*"); // 모든 바디
+const frame = document.querySelector("#frame");
 const header = document.querySelector("header");
 const footer = document.querySelector("footer");
 //약력 파트 line들
@@ -31,6 +32,7 @@ const lightDarkModeBtn = (e) => {
   if (e.target.innerText === "다크모드") {
     modeBtn.innerText = "라이트 모드"; // 라이트모드로 변경
     everyThing.style = "background-color:black; color:white;";
+    frame.style = "background-color:black; color:white";
     header.style = "background-color:black;";
     footer.style = "background-color:black; color:white";
     secondLine.style = "background-color:white";

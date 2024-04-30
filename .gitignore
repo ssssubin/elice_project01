@@ -124,6 +124,6 @@ package-lock.json
 .DS_Store
 
 # 카카오톡 공유하기 API 키 들어있는 파일
-# config.js
+config.js
 
 

@@ -3,9 +3,9 @@
 <html lang="kr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../elice_project01/src/css/index.css" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>Eich_introduction</title>
+    <link rel="stylesheet" href="/eich_introduction/src/css/index.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -19,7 +19,7 @@
     <section id="frame">
       <header>
         <img
-          src="../elice_project01/src/assets/images/newJs.png"
+          src="/eich_introduction/src/assets/images/newJs.png"
           alt="js icon"
         />
         <nav>
@@ -35,25 +35,25 @@
           </ul>
         </nav>
       </header>
-      <section>
-        <main id="home">
+      <section id="home">
+        <main>
           <ul class="slider">
             <p class="arrow left">〈</p>
             <li class="slide active">
               <img
-                src="../elice_project01/src/assets/images/eich2.png"
+                src="/eich_introduction/src/assets/images/eich2.png"
                 alt="eich image 1"
               />
             </li>
             <li class="slide">
               <img
-                src="../elice_project01/src/assets/images/brendan2.png"
+                src="/eich_introduction/src/assets/images/brendan2.png"
                 alt="eich image 2"
               />
             </li>
             <li class="slide">
               <img
-                src="../elice_project01/src/assets/images/brendan.png"
+                src="/eich_introduction/src/assets/images/brendan.png"
                 alt="eich image 3"
               />
             </li>
@@ -74,7 +74,7 @@
         <!-- 아이크씨 얼굴사진 -->
         <img
           class="first_picture"
-          src="../elice_project01/src/assets/images/eich1.PNG"
+          src="/eich_introduction/src/assets/images/eich1.PNG"
           alt="아이크1"
         />
 
@@ -92,6 +92,7 @@
           <div class="bottom_imagegroup" id="iconContainer"></div>
         </article>
       </section>
+
       <!-- 약력 section -->
       <section id="profile">
         <div class="first">
@@ -181,7 +182,7 @@
           </div>
           <div class="detail">
             <img
-              src="../elice_project01/src/assets/icons/jsicon.png"
+              src="/eich_introduction/src/assets/icons/jsicon.png"
               alt="js_icon"
             />
             <div>
@@ -251,7 +252,7 @@
           </div>
           <div class="detail">
             <img
-              src="../elice_project01/src/assets/images/brave_brower.png"
+              src="/eich_introduction/src/assets/images/brave_brower.png"
               alt="brave_browser_img"
             />
             <div>
@@ -294,7 +295,7 @@
           </div>
           <div class="detail">
             <img
-              src="../elice_project01/src/assets/images/mozilla.png"
+              src="/eich_introduction/src/assets/images/mozilla.png"
               alt="mozilla_img"
             />
             <div>
@@ -419,61 +420,64 @@
             </button>
             <p>Kakao</p>
           </div>
-          <span>
-            <script
-              type="text/javascript"
-              src="https://ssl.pstatic.net/share/js/naver_sharebutton.js"
-            ></script>
-            <script type="text/javascript">
-              new ShareNaver.makeButton({ type: "b" });
-            </script>
-          </span>
+          <div class="icon">
+            <button class="mail" onclick="writeEmail()">
+              <i class="fa-regular fa-envelope"></i>
+            </button>
+            <p>Mail</p>
+          </div>
         </div>
+
         <div class="modalLink">
           <p>Page Link</p>
           <div class="link">
             <p>https://127.0.0.1</p>
-            <button><i class="fa-regular fa-clone"></i></button>
+            <button class="copy"><i class="fa-regular fa-clone"></i></button>
           </div>
         </div>
       </div>
+
       <footer>
         <div class="teamIntroduction">
           <h1>1팀</h1>
           <p>Developers</p>
           <button>
-            <i onclick="openModal()" class="fa-regular fa-clone"></i>
+            <i
+              onclick="openModal()"
+              class="fa-solid fa-up-right-from-square"
+            ></i>
           </button>
         </div>
         <div class="members" id="members-container"></div>
       </footer>
+
       <!-- 페이지업-->
       <button class="scroll-button" onclick="scrollToTop()">
         <i class="fa-solid fa-circle-arrow-up"></i>
       </button>
-
       <!-- 페이지 다운 -->
       <!-- <button class="scroll-button" onclick="scrollToBottom()">↡</button> -->
       <div style="height: auoto"></div>
       <button id="mode">다크모드</button>
     </section>
-
     <!-- intergrity에 "" 제외한 문자열 다 지운 후 config.js 파일에서 KAKAO_INTEGRITY 키 복붙해주세요! -->
     <script
       src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.1/kakao.min.js"
       integrity="sha384-kDljxUXHaJ9xAb2AzRd59KxjrFjzHa5TAoFQ6GbYTCAG0bjM55XohjjDT7tDDC01"
       crossorigin="anonymous"
     ></script>
+
     <!-- 파이 차트(chart.js 라이브러리 사용) -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-    <script src="../elice_project01/src/js/profile.js"></script>
-    <script src="../elice_project01/src/js/nav.js"></script>
-    <script src="../elice_project01/src/js/updown.js"></script>
-    <script src="../elice_project01/src/js/container.js"></script>
-    <script src="../elice_project01/src/js/footmember.js"></script>
-    <script src="../elice_project01/src/js/shareModal.js"></script>
-    <script src="../elice_project01/src/js/slider.js"></script>
-    <script src="../elice_project01/src/js/chart.js"></script>
-    <script src="../elice_project01/src/js/icondata.js"></script>
+    <script src="/eich_introduction/src/js/profile.js"></script>
+    <script src="/eich_introduction/src/js/nav.js"></script>
+    <script src="/eich_introduction/src/js/updown.js"></script>
+    <script src="/eich_introduction/src/js/container.js"></script>
+    <script src="/eich_introduction/src/js/footmember.js"></script>
+    <script src="/eich_introduction/src/js/shareModal.js"></script>
+    <script src="/eich_introduction/src/js/slider.js"></script>
+    <script src="/eich_introduction/src/js/chart.js"></script>
+    <script src="/eich_introduction/src/js/icondata.js"></script>
+    <script src="/eich_introduction/src/js/kakao.js" type="module"></script>
   </body>
 </html>
