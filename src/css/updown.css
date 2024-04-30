@@ -4,28 +4,19 @@
   right: 10px;
   z-index: 1000;
   background-color: transparent;
-  font-size: 3.6rem;
+  font-size: 4rem;
   border-radius: 50%;
 }
 
-.scroll-up {
-  bottom: 20px;
-  left: 20px;
-}
-
-.scroll-down {
-  bottom: 20px;
-  right: 20px;
-}
 /* 라이트 / 다크 모드 버튼 css */
 #mode {
-  width: 80px;
+  width: 100px;
   height: auto;
   background-color: var(--circle-color2);
+  font-weight: bold;
   padding: 10px;
   border-radius: 15px;
-  font-size: 10px;
-  font-weight: bold;
+  font-size: 1.5rem;
   position: fixed;
   bottom: 15px;
   right: 55px;
@@ -35,13 +26,13 @@
 
 @media (min-width: 600px) {
   .scroll-button {
-    font-size: 4rem;
+    font-size: 5rem;
   }
   #mode {
-    width: 90px;
-    font-size: 12px;
+    width: 130px;
+    font-size: 2rem;
     bottom: 18px;
-    right: 60px;
+    right: 70px;
   }
 }
 

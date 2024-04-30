@@ -45,6 +45,7 @@ const lightDarkModeBtn = (e) => {
   else {
     modeBtn.innerText = "다크모드";
     everyThing.style = "background-color:white; color:black";
+    frame.style = "background-color:white; color:black";
     header.style = "background-color:white;";
     footer.style = "background-color:#eee; color:var(--footer-color);";
     secondLine.style = "background-color:black";

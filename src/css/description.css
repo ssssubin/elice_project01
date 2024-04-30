@@ -3,7 +3,7 @@
   /* 넓이를 border 포함한 넓이로 설정 */
   box-sizing: border-box;
   min-width: 340px;
-  padding: 10px 15px 10px 15px;
+  padding: 10px 20px 10px 20px;
 }
 #des article {
   width: 100%;
@@ -38,6 +38,7 @@
   margin-top: 5px;
   height: 20px;
   margin-bottom: 15px;
+  font-size: 1.3rem;
 }
 
 /* 토글 버튼들 */
@@ -85,7 +86,7 @@
   right: 27%;
 }
 .detail .chartWrapper .programLang:nth-child(3) {
-  top: 103%;
+  top: 95%;
   right: 46%;
 }
 .detail .chartWrapper .programLang:nth-child(4) {
@@ -114,6 +115,7 @@
   text-align: start;
   padding-left: 10px;
   height: auto;
+  font-size: 1.3rem;
   margin-bottom: 15px;
 }
 /* 토글 기능 구현 시 사용할 class: hidden, toggle */
