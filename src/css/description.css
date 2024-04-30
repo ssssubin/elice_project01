@@ -57,21 +57,22 @@
 /* 파이 차트와 프로그래밍 언어 감싸는 div 태그 */
 /* 파이 차트 가운데 정렬 */
 .detail .chartWrapper {
-  min-width: 340px;
+  min-width: 313px;
   height: auto;
-  margin: 15px auto 50px;
+  margin: 20px auto 50px;
   position: relative;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: bold;
 }
 .programLang.title {
-  font-size: 10px;
+  font-size: 13px;
   min-height: 15px;
   font-weight: bold;
 }
 .detail .pieChart {
-  width: 40%;
+  width: 50%;
   height: auto;
+  margin: 0 auto;
   margin-top: 20px;
 }
 .detail .chartWrapper .programLang {
@@ -79,35 +80,36 @@
 }
 .detail .chartWrapper .programLang:nth-child(1) {
   top: 13%;
-  right: 25%;
+  right: 19.5%;
 }
 .detail .chartWrapper .programLang:nth-child(2) {
-  top: 80%;
-  right: 27%;
+  top: 75%;
+  right: 22%;
 }
 .detail .chartWrapper .programLang:nth-child(3) {
-  top: 95%;
+  top: 100%;
   right: 46%;
 }
 .detail .chartWrapper .programLang:nth-child(4) {
-  top: 78%;
-  left: 26%;
+  top: 70%;
+  left: 20%;
 }
 .detail .chartWrapper .programLang:nth-child(5) {
   top: 31%;
-  left: 22%;
+  left: 15%;
 }
 .detail .chartWrapper .programLang:nth-child(6) {
-  left: 30%;
+  left: 24%;
+  top: 3%;
   color: red;
 }
 .detail .chartWrapper .programLang:nth-child(7) {
-  top: -3%;
-  left: 38%;
+  top: -1%;
+  left: 36%;
 }
 .detail .chartWrapper .programLang:nth-child(8) {
   top: -5%;
-  left: 44%;
+  left: 42%;
 }
 /* js, brave, mozilla 설명 css 코드 */
 .detail .content {
@@ -178,30 +180,32 @@
     font-size: 1.3rem;
   }
   .detail .chartWrapper .programLang:nth-child(1) {
-    right: 26%;
+    right: 23%;
   }
   .detail .chartWrapper .programLang:nth-child(2) {
-    right: 29%;
+    top: 75%;
+    right: 24%;
   }
   .detail .chartWrapper .programLang:nth-child(3) {
     top: 100%;
     right: 48%;
   }
   .detail .chartWrapper .programLang:nth-child(4) {
-    top: 76%;
-    left: 28%;
+    top: 70%;
+    left: 22%;
   }
   .detail .chartWrapper .programLang:nth-child(5) {
-    left: 24%;
+    left: 19%;
   }
   .detail .chartWrapper .programLang:nth-child(6) {
-    left: 31%;
+    top: 3%;
+    left: 28%;
   }
   .detail .chartWrapper .programLang:nth-child(7) {
-    top: -2%;
+    top: 0;
   }
   .detail .chartWrapper .programLang:nth-child(8) {
-    top: -6%;
+    top: -4%;
   }
 }
 
@@ -242,30 +246,30 @@
     font-size: 1.8rem;
   }
   .detail .chartWrapper .programLang:nth-child(1) {
-    right: 28%;
+    right: 24%;
   }
   .detail .chartWrapper .programLang:nth-child(2) {
-    right: 29%;
+    right: 24.5%;
   }
   .detail .chartWrapper .programLang:nth-child(3) {
-    top: 102%;
+    top: 100%;
     right: 50%;
   }
   .detail .chartWrapper .programLang:nth-child(4) {
-    left: 28%;
+    left: 23%;
   }
   .detail .chartWrapper .programLang:nth-child(5) {
-    left: 25.5%;
+    left: 20.5%;
   }
   .detail .chartWrapper .programLang:nth-child(6) {
-    top: 2%;
-    left: 32%;
+    top: 3%;
+    left: 29%;
   }
   .detail .chartWrapper .programLang:nth-child(7) {
-    top: -2%;
-    left: 39%;
+    top: -0.5%;
+    left: 37%;
   }
   .detail .chartWrapper .programLang:nth-child(8) {
-    top: -6%;
+    top: -4.5%;
   }
 }
