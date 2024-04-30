@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("./json/footmember.json")
+  fetch("../json/footmember.json")
     .then((response) => response.json())
     .then((data) => {
       const membersContainer = document.getElementById("members-container");

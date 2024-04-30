@@ -14,7 +14,7 @@ function openModal() {
 function closeModal() {
   modalOverlay.style.display = "none";
   shareModal.style.display = "none";
-  copyClip.innerHTML = '<i class="fa-regular fa-clone"></i>'
+  copyClip.innerHTML = '<i class="fa-regular fa-clone"></i>';
 }
 
 btnShareTw.addEventListener("click", () => {
@@ -54,7 +54,7 @@ copyClip.addEventListener("click", function copyToClipBoard() {
     .then(() => {
       // 복사가 잘 됐을 경우
       console.log("Text copied to clipboard...");
-      copyClip.innerHTML = '<i class="fa-solid fa-check"></i>'
+      copyClip.innerHTML = '<i class="fa-solid fa-check"></i>';
     })
     .catch((err) => {
       // 복사가 안 됐을 경우
@@ -65,7 +65,7 @@ copyClip.addEventListener("click", function copyToClipBoard() {
 // 이메일 공유하기 버튼 클릭 시
 // prompt 창 띄워서 이메일 입력할 수 있도록 하는 함수
 function writeEmail() {
-  let email = prompt("이메일을 입력해주세요" + "");
+  let email = prompt("이 페이지를 공유할 이메일을 입력해주세요" + "");
   // 작성한 이메일에 @가 없으면 다시 입력하라는 알림창 띄운 후
   // 다시 writeEmail 함수 호출
   if (!email.includes("@")) {
@@ -99,4 +99,3 @@ function sendEmail(email) {
   // 이메일 클라이언트를 엶
   window.open(emailLink);
 }
-
