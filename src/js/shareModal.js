@@ -37,8 +37,8 @@ function shareMessage() {
     text: "1팀 웹 페이지로 넘어오시렵니까?",
     link: {
       // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
-      mobileWebUrl: "https://bright-churros-ab86fe.netlify.app",
-      webUrl: "https://bright-churros-ab86fe.netlify.app",
+      mobileWebUrl: "https://ssssubin.github.io/elice_project01/",
+      webUrl: "https://ssssubin.github.io/elice_project01/",
     },
   });
 }
