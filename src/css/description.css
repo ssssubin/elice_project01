@@ -117,7 +117,7 @@
   text-align: start;
   padding-left: 10px;
   height: auto;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 15px;
 }
 /* 토글 기능 구현 시 사용할 class: hidden, toggle */
@@ -165,7 +165,7 @@
   }
 
   .detail .content {
-    font-size: 17px;
+    font-size: 20px;
     line-height: 25px;
   }
   .programLang.title {

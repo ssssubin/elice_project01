@@ -4,7 +4,7 @@
   /* 박스의 크기를 테두리를 포함한 크기로 정함*/
   min-width: 340px;
   min-height: 250px;
-  padding: 20px 50px 20px 50px;
+  padding: 20px 40px 20px 40px;
   font-weight: bold;
   font-size: 1.4rem;
   margin-top: 30px;
@@ -236,7 +236,7 @@
 @media (min-width: 600px) {
   #profile {
     font-size: 24px;
-    padding: 40px;
+    padding: 20px 60px 20px 60px;
   }
 
   .first .year {
